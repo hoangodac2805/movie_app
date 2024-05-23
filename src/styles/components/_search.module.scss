@@ -1,0 +1,39 @@
+@import "../base/variables";
+@import "../base/mixin";
+.search {
+    max-width: 344px;
+    border: 1px solid $cl_grey-700;
+    border-radius: 12px;
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    &_icon {
+        margin-right: 15px;
+    }
+    &_inputWrap {
+        display: flex;
+        flex-grow: 1;
+        position: relative;
+    }
+   
+    &_input {
+        @include body_regular;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 100%;
+        padding: 10px 0 0px;
+
+        &:focus ~ .search_placeHolder,&:not(:placeholder-shown) ~ .search_placeHolder{
+            top: 15%
+        }
+    }
+    &_placeHolder {
+        @include caption;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s;
+        pointer-events: none;
+    }
+}
