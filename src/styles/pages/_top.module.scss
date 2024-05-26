@@ -1,12 +1,34 @@
 @import "../base/variables";
+@import "../base/mixin";
+
 .top {
     &_headingSub {
         font-size: 16px;
         line-height: calc(24 / 16);
         letter-spacing: 0;
         color: $cl_grey-300;
+
         span {
             color: $cl_primary-300;
         }
+    }
+
+    &_filter {
+        margin-top: 75px;
+        width: fit-content;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(40px);
+        border-radius: 12px;
+        display: flex;
+        padding: 8px;
+        >div {
+            border-radius: 8px;
+            @include link_regular($cl_grey-50);
+            padding: 0.5em 2em;
+            cursor: pointer;
+        }
+    }
+    .btn_active {
+        background-color: $cl_primary-400;
     }
 }

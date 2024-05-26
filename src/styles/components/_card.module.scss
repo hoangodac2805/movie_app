@@ -1,0 +1,71 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+.card {
+    position: relative;
+    padding: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+
+    &:hover {
+        .card_poster img {
+            transform: scale(1.1);
+        }
+    }
+
+    &_bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        inset: 0;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(100px);
+    }
+
+    &_content {
+        position: relative;
+    }
+
+    &_poster {
+        border-radius: 8px;
+        overflow: hidden;
+        aspect-ratio: 266/400;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            object-fit: cover;
+            transition: all .5s;
+        }
+    }
+
+    &_ttl {
+        @include link_regular($cl_grey-50);
+        margin: 1.5em 0 0.7em;
+        padding-left: 0.5em;
+    }
+
+    &_vote {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: 2%;
+        left: 3%;
+        background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px);
+        padding: 5px 10px;
+        border-radius: 8px;
+        span {
+            @include body_regular($cl_warning-500);
+            margin-left: 2px;
+            margin-top: 2px;
+        }
+    }
+}

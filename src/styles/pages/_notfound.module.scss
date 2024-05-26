@@ -1,0 +1,25 @@
+@import "../base/variables";
+@import "../base/mixin";
+
+.nf {
+    text-align: center;
+
+    &_head {
+        @include heading_h1()
+    }
+
+    &_sub {
+        @include body_regular($cl_grey-300);
+        margin-top: 1em
+    }
+
+    &_btn {
+        @include body_regular($cl_white-100);
+        background-color: $cl_primary-400;
+        text-decoration: none;
+        border-radius: 12px;
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        display: inline-block;
+    }
+}

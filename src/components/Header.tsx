@@ -6,7 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 const Header = () => {
   return (
-    <header className={`l-container ${styles.header}`}>
+    <header className={`${styles.header}`}>
+      <Container>
       <Link href={"/"}>
         <Image src={logo} alt="logo" />
       </Link>
@@ -21,6 +22,7 @@ const Header = () => {
           Suggest me
         </Link>
       </div>
+      </Container>
     </header>
   );
 };
