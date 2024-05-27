@@ -1,46 +1,67 @@
 @mixin link_regular($color) {
-    font-weight: 600;
-    font-size: 16px;
-    line-height: calc(24 / 16);
-    letter-spacing: 0.02em;
-    color: $color;
-    text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+  color: $color;
+  text-decoration: none;
 }
 
 @mixin heading_h1($color: $cl_grey-50) {
-    font-weight: 600;
-    font-size: 64px;
-    line-height: calc(80 / 64);
-    letter-spacing: -0.02em;
-    color: $color;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: calc(80 / 64);
+  letter-spacing: -0.02em;
+  color: $color;
 }
 
 @mixin heading_h2($color: $cl_grey-50) {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: calc(40 / 32);
-    letter-spacing: -0.02em;
-    color: $color;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: calc(40 / 32);
+  letter-spacing: -0.02em;
+  color: $color;
 }
 
 @mixin heading_h3($color: $cl_grey-50) {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: calc(40 / 32);
-    letter-spacing: -0.02em;
-    color: $color;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: calc(40 / 32);
+  letter-spacing: -0.02em;
+  color: $color;
+}
+
+@mixin heading_h4($color: $cl_grey-50) {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(32 / 24);
+  letter-spacing: -0.015em;
+  color: $color;
 }
 
 @mixin caption($color: $cl_grey-600) {
-    font-size: 14px;
-    line-height: calc(16 / 14);
-    letter-spacing: 0;
-    color: $color;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0;
+  color: $color;
+}
+@mixin body_large($color:$cl_grey-300) {
+  font-size: 20px;
+  line-height: calc(32 / 20);
+  letter-spacing: 0;
+  color: $color;
+  font-weight: 400;
 }
 
 @mixin body_regular($color: $cl_grey-400) {
-    font-size: 16px;
-    line-height: calc(24 / 16);
-    letter-spacing: 0;
-    color: $color;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0;
+  color: $color;
+}
+@mixin body_extraSmall($color: $cl_primary-200) {
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0;
+  color: $color;
 }

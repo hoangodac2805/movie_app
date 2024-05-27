@@ -12,7 +12,7 @@ export type MovieDetailType = {
   backdrop_path: string;
   belongs_to_collection: IBTCollection;
   budget: number;
-  genders: Array<IGenres>;
+  genres: Array<IGenres>;
   homepage: string;
   id: number;
   imdb_id: string;
@@ -53,5 +53,24 @@ export type MovieTrendingType = Pick<
   | "vote_count"
 > & {
   media_type: MEDIATYPE.MOVIE;
+  genre_ids: Array<number>;
+};
+
+export type MovieSearchType = Pick<
+  MovieDetailType,
+  | "backdrop_path"
+  | "id"
+  | "original_title"
+  | "overview"
+  | "poster_path"
+  | "adult"
+  | "title"
+  | "original_language"
+  | "popularity"
+  | "release_date"
+  | "video"
+  | "vote_average"
+  | "vote_count"
+> & {
   genre_ids: Array<number>;
 };

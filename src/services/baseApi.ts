@@ -2,7 +2,8 @@ import axios from "axios";
 import { get } from "http";
 
 export class baseApi {
-  constructor() {}
+  constructor() {
+  }
   get = <T>(url: string, data?: any) => {
     return axios.get<T>(`${process.env.apiHost}${url}`, {
       headers: {

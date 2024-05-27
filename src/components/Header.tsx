@@ -15,7 +15,7 @@ const Header = () => {
         <Link href={"/movies"} className={styles.nav_link}>
           Movies
         </Link>
-        <Link href={"/tvshow"} className={styles.nav_link}>
+        <Link href={"/tvshows"} className={styles.nav_link}>
           TV Shows{" "}
         </Link>
         <Link href={"/suggest"} className={styles.nav_link}>
