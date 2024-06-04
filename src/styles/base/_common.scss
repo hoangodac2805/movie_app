@@ -2,7 +2,9 @@
     @include heading_h1();
     margin-bottom: 0.2em;
 }
-
+.c-heading2 {
+    
+}
 .c-heading3 {
     @include heading_h3($cl_grey-400);
 }

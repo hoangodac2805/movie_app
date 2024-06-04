@@ -1,4 +1,4 @@
 import { MovieTrendingType } from "./MovieType";
-import { TvTreadingType } from "./TvType";
+import { TvTrendingType } from "./TvType";
 
-export type TrendingType = MovieTrendingType | TvTreadingType
+export type TrendingType = MovieTrendingType | TvTrendingType

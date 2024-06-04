@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "@/styles/index.scss"
 import Header from "@/components/Header";
 import { QueryProvider } from "@/providers/QueryProvider";

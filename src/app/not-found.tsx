@@ -1,8 +1,8 @@
-import Container from '@/components/Container'
 import Image from 'next/image'
 import Link from 'next/link'
 import notfound from "@/assets/img/404.svg"
-import styles from "@/styles/pages/_notfound.module.scss"
+import styles from "./_notfound.module.scss"
+import Container from '@/components/Container'
 export default function NotFound() {
   return (
     <main className={styles.nf}>

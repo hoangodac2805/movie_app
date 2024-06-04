@@ -1,15 +1,15 @@
+import { MEDIATYPE } from "@/enums/media";
 import {
   IBTCollection,
   IGenres,
   IPCTCompany,
   IPCTCountry,
   ISpokenLanguage,
-  MEDIATYPE,
 } from "./CommonType";
 
 export type MovieDetailType = {
   adult: boolean;
-  backdrop_path: string;
+  backdrop_path: string | null;
   belongs_to_collection: IBTCollection;
   budget: number;
   genres: Array<IGenres>;
@@ -21,7 +21,7 @@ export type MovieDetailType = {
   original_title: string;
   overview: string;
   popularity: number;
-  poster_path: string;
+  poster_path: string | null;
   production_companies: Array<IPCTCompany>;
   production_countries: Array<IPCTCountry>;
   release_date: string;
@@ -32,7 +32,7 @@ export type MovieDetailType = {
   tagline: string;
   title: string;
   video: boolean;
-  vote_average: number;
+  vote_average: number | null;
   vote_count: number;
 };
 

@@ -1,0 +1,108 @@
+@import "../../styles/base/variables";
+@import "../../styles/base/mixin";
+
+.detail {
+  &_banner {
+    overflow: hidden;
+    border-radius: 40px;
+    aspect-ratio: 1200/480;
+    position: relative;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &_lead {
+    border-radius: 24px;
+    background: rgba(32, 40, 62, 0.8);
+    backdrop-filter: blur(12px);
+    min-width: 560px;
+    width: fit-content;
+    padding: 40px;
+    margin-top: -72px;
+    margin-left: 6.6666666667%;
+  }
+
+  &_breadcrumb {
+    @include body_extraSmall();
+  }
+
+  &_name {
+    @include heading_h3($cl_grey-50);
+    margin-top: 5px;
+  }
+
+  &_body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 6.6666666667%;
+    margin-top: 80px;
+  }
+
+  &_poster {
+    width: 46.1538461538%;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  &_info {
+    width: 46.1538461538%;
+  }
+
+  &_vote {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    top: 2%;
+    left: 3%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+
+    span {
+      @include body_regular($cl_warning-500);
+      margin-left: 2px;
+      margin-top: 2px;
+    }
+  }
+
+  &_tagline {
+    @include heading_h4;
+    margin-bottom: 1em;
+  }
+
+  &_overview {
+    @include body_large();
+    margin-bottom: 1.2em;
+  }
+
+  &_table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &_table_item {
+    width: fit-content;
+    min-width: calc(100% / 2 - 12px);
+
+    &_label {
+      @include body_regular();
+    }
+
+    &_value {
+      @include body_large($cl_grey-100);
+      margin-top: 8px;
+    }
+  }
+}

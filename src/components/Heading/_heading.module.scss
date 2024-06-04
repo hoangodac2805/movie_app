@@ -1,0 +1,29 @@
+@import "../../styles/base/variables";
+@import "../../styles/base/mixin";
+
+.heading_1 {
+    margin: 0.2em 0;
+    @include heading_h1()
+}
+.heading_2 {
+    margin: 0.2em 0;
+    @include heading_h2()
+}
+.heading_3 {
+    margin: 0.2em 0;
+    @include heading_h3()
+}
+.heading_4 {
+    margin: 0.2em 0;
+    @include heading_h4()
+}
+.heading_5 {
+    margin: 0.2em 0;
+    @include heading_h5()
+}
+.heading_6 {
+    margin: 0.2em 0;
+    @include heading_h6()
+}
+
+

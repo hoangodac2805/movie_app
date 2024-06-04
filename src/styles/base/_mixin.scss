@@ -1,4 +1,4 @@
-@mixin link_regular($color) {
+ @mixin link_regular($color) {
   font-weight: 600;
   font-size: 16px;
   line-height: calc(24 / 16);
@@ -35,6 +35,22 @@
   font-weight: 700;
   font-size: 24px;
   line-height: calc(32 / 24);
+  letter-spacing: -0.015em;
+  color: $color;
+}
+
+@mixin heading_h5($color: $cl_grey-50) {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  letter-spacing: -0.015em;
+  color: $color;
+}
+
+@mixin heading_h6($color: $cl_grey-50) {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(24 / 16);
   letter-spacing: -0.015em;
   color: $color;
 }

@@ -4,11 +4,6 @@ export interface IPaginate {
   total_results: number;
 }
 export type ResWithPaginateType<D> = IPaginate & { results: Array<D> };
-export enum MEDIATYPE {
-  MOVIE = "movie",
-  TV = "tv",
-}
-
 export interface IBTCollection {
   id: number;
   name: string;

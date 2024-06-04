@@ -1,0 +1,15 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 2%;
+
+    >* {
+        width: calc(100% / 4 - 2% * 3 / 4);
+    }
+    @media screen and (max-width : 769px) {
+        > *{ 
+        width: calc(100% / 2 - 2% * 1 / 2);
+
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import { MEDIATYPE } from "@/enums/media";
 import {
   ICreatedBy,
   IGenres,
@@ -7,12 +8,11 @@ import {
   IPCTCountry,
   ISeason,
   ISpokenLanguage,
-  MEDIATYPE,
 } from "./CommonType";
 
 export type TvDetailType = {
   adult: boolean;
-  backdrop_path: string;
+  backdrop_path: string | null;
   created_by: Array<ICreatedBy>;
   episode_run_time: Array<number>;
   first_air_date: string;
@@ -33,7 +33,7 @@ export type TvDetailType = {
   original_name: string;
   overview: string;
   popularity: number;
-  poster_path: string;
+  poster_path: string | null;
   production_companies: Array<IPCTCompany>;
   production_countries: Array<IPCTCountry>;
   seasons: Array<ISeason>;
@@ -41,11 +41,11 @@ export type TvDetailType = {
   status: string;
   tagline: string;
   type: string;
-  vote_average: number;
+  vote_average: number | null;
   vote_count: number;
 };
 
-export type TvTreadingType = Pick<
+export type TvTrendingType = Pick<
   TvDetailType,
   | "backdrop_path"
   | "id"
@@ -62,5 +62,24 @@ export type TvTreadingType = Pick<
   | "origin_country"
 > & {
   media_type: MEDIATYPE.TV;
+  genre_ids: Array<number>;
+};
+
+export type TvSearchType = Pick<
+  TvDetailType,
+  | "backdrop_path"
+  | "id"
+  | "original_name"
+  | "overview"
+  | "poster_path"
+  | "adult"
+  | "name"
+  | "original_language"
+  | "popularity"
+  | "first_air_date"
+  | "vote_average"
+  | "vote_count"
+  | "origin_country"
+> & {
   genre_ids: Array<number>;
 };

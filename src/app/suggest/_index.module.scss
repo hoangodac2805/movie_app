@@ -1,0 +1,32 @@
+@import "../../styles/base/variables";
+@import "../../styles/base/mixin";
+
+.suggest {
+    &_headingSub {
+        font-size: 16px;
+        line-height: calc(24 / 16);
+        letter-spacing: 0;
+        color: $cl_grey-300;
+
+        span {
+            color: $cl_primary-300;
+        }
+    }
+
+    &_heading {
+        @include heading_h1();
+        margin-bottom: 0.2em;
+    }
+}
+
+.total {
+    margin: 20px 0;
+
+    &_label {
+        @include heading_h3($cl_grey-400);
+    }
+
+    &_number {
+        @include body_regular($cl_grey-400)
+    }
+}
